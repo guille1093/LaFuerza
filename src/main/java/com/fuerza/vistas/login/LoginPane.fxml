@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="485.0" prefWidth="467.0" styleClass="background" stylesheets="@/styles/Styles.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.fuerza.vistas.login.LoginPane">
+    <TextField fx:id="username" alignment="CENTER" layoutX="132.0" layoutY="309.0" prefHeight="36.0" prefWidth="204.0" promptText="INGRESE SU USUARIO" styleClass="txtfield" stylesheets="@/styles/Styles.css">
+      <font>
+         <Font name="Avenir Book" size="13.0" />
+      </font></TextField>
+    <PasswordField fx:id="password" alignment="CENTER" layoutX="132.0" layoutY="364.0" prefHeight="36.0" prefWidth="204.0" promptText="INGRESE SU CLAVE" styleClass="txtfield" stylesheets="@/styles/Styles.css" />
+    <Button fx:id="btnLogin" layoutX="165.0" layoutY="418.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="137.0" styleClass="btnGreen" text="INGRESAR" textFill="WHITE">
+        <font>
+            <Font size="15.0" />
+        </font>
+        <effect>
+            <DropShadow blurType="ONE_PASS_BOX" />
+        </effect>
+    </Button>
+   <Pane layoutX="81.0" layoutY="-47.0" prefHeight="315.0" prefWidth="307.0" styleClass="bodybg" />
+    <Label fx:id="lblLogin" layoutX="132.0" layoutY="268.0" prefHeight="26.0" prefWidth="204.0" textFill="WHITE">
+        <font>
+            <Font name="Avenir Book" size="13.0" />
+        </font>
+    </Label>
+    <opaqueInsets>
+        <Insets />
+    </opaqueInsets>
+</AnchorPane>

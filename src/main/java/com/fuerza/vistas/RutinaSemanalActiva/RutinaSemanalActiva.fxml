@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="591.0" prefWidth="710.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.fuerza.vistas.RutinaSemanalActiva.RutinaSemanalActiva">
+   <children>
+      <Label layoutX="247.0" layoutY="30.0" prefHeight="36.0" prefWidth="250.0" text="Rutina Semanal Activa">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <TableView fx:id="TdatosRSA" layoutX="20.0" layoutY="207.0" prefHeight="367.0" prefWidth="670.0">
+         <columns>
+            <TableColumn fx:id="TCdiaRSA" prefWidth="75.0" text="Dia" />
+            <TableColumn fx:id="TCejercicioRSA" prefWidth="236.8000144958496" text="Ejercicios" />
+            <TableColumn fx:id="TCseriesRSA" minWidth="0.0" prefWidth="89.59999084472656" text="Series" />
+            <TableColumn fx:id="TCrepeticionesRSA" prefWidth="134.39996337890625" text="Repeticiones" />
+            <TableColumn fx:id="TCdescansoRSA" prefWidth="132.79996337890623" text="Descanso" />
+         </columns>
+      </TableView>
+      <Button fx:id="BTvolverRSA" layoutX="3.0" layoutY="2.0" minHeight="5.0" mnemonicParsing="false" prefHeight="19.0" prefWidth="38.0">
+         <font>
+            <Font size="9.0" />
+         </font></Button>
+      <Button fx:id="dnibt" layoutX="492.0" layoutY="123.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="38.0">
+         <font>
+            <Font size="9.0" />
+         </font></Button>
+      <Label layoutX="19.0" layoutY="183.0" text="Esta son los ejercicios previstos en la semana para:">
+         <font>
+            <Font name="Verdana" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="LnombreRSA" layoutX="385.0" layoutY="183.0">
+         <font>
+            <Font name="Verdana Bold" size="14.0" />
+         </font>
+      </Label>
+      <GridPane layoutX="187.0" layoutY="119.0" prefHeight="36.0" prefWidth="299.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="147.0" minWidth="10.0" prefWidth="87.00001220703126" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="216.80001373291014" minWidth="10.0" prefWidth="211.79998779296875" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label text="DNI del cliente:" />
+            <TextField fx:id="tfdni" GridPane.columnIndex="1" />
+         </children>
+      </GridPane>
+      <Separator layoutX="-4.0" layoutY="163.0" prefHeight="6.0" prefWidth="716.0" />
+      <Separator layoutX="-3.0" layoutY="106.0" prefHeight="6.0" prefWidth="716.0" />
+      <Label layoutX="5.0" layoutY="91.0" text="Datos del cliente">
+         <font>
+            <Font name="System Bold Italic" size="13.0" />
+         </font>
+      </Label>
+      <Separator layoutX="160.0" layoutY="107.0" orientation="VERTICAL" prefHeight="59.0" prefWidth="6.0" />
+      <Separator layoutX="549.0" layoutY="107.0" orientation="VERTICAL" prefHeight="59.0" prefWidth="13.0" />
+   </children>
+</AnchorPane>

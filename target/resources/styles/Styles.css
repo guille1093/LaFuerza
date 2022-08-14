@@ -1,0 +1,47 @@
+/*  ESTILOS CSS */
+
+.btnGreen {
+    -fx-background-color: #3cbc53;
+}
+
+.background {
+    -fx-background-color:  #1A232C;
+}
+
+.bodybg {
+    -fx-background-image: url('/images/logo.jpeg');
+    -fx-background-size: 100% 100%;
+}
+
+.txtfield {
+    -fx-background-color: #1A3434;
+    -fx-text-fill: white;
+    -fx-font-size: 13px;
+    -fx-font-family: 'Avenir Book';
+    -fx-font-weight: bold;
+    -fx-border-color: #FFFFFF;
+    -fx-border-width: 1px;
+    -fx-border-radius: 5px;
+    -fx-padding: 5px;
+}
+
+
+.botonMA {
+    -fx-background-color: #9ECFF0;
+    -fx-color: yellow;
+}
+
+.botonMA:hover {
+    -fx-background-color: #81c884;
+    -fx-color: blue;
+}
+
+
+.botonCerrarSesion {
+    -fx-background-color: #d8d8ff;
+}
+
+.botonCerrarSesion:hover {
+    -fx-background-color: #9d9dff;
+    -fx-color: blue;
+}
