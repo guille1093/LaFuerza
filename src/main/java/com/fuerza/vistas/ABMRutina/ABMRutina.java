@@ -35,12 +35,9 @@ public class ABMRutina implements Initializable, FxController {
     @Autowired
     private StageManager stageManager;
 
-
     public ObservableList<DetalleRutina> detalleRutinas = FXCollections.observableArrayList();
-
     public ObservableList<String> dia = FXCollections.observableArrayList("Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado");
     public ObservableList<GrupoMuscular> grupoMusculares = FXCollections.observableArrayList();
-
     public ObservableList<Ejercicio> ejercicios = FXCollections.observableArrayList();
     public ObservableList<String> series = FXCollections.observableArrayList("1", "2", "3", "4", "5", "6", "7", "8", "9", "10");
 

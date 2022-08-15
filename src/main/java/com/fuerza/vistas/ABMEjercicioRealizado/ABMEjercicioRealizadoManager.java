@@ -1,6 +1,5 @@
 package com.fuerza.vistas.ABMEjercicioRealizado;
 
-import com.fuerza.modelo.DetalleRutina;
 import com.fuerza.modelo.EntrenamientoRealizado;
 import com.fuerza.servicios.Cliente.ClienteServiceImpl;
 import com.fuerza.servicios.DetalleRutina.DetalleRutinaServiceImpl;
@@ -12,7 +11,6 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.Optional;
@@ -73,8 +71,6 @@ public class ABMEjercicioRealizadoManager {
         abmEjercicioRealizado.TFRepeticiones.setDisable(false);
         abmEjercicioRealizado.TFSeries.setDisable(false);
         abmEjercicioRealizado.CBgrupoMusculares.setDisable(false);
-        //abmEjercicioRealizado.TVEjerciciosRealizado.setDisable(false);
-        //abmEjercicioRealizado.ejercicios.addAll(detalleRutinaService.findBycliente_dniAndAndRutinaDiaria_UnEntrenamiento_FechaInicio(abmEjercicioRealizado.TFDniCliente.getText(),  LocalDate.now() ));
         abmEjercicioRealizado.ejercicios.clear();
         abmEjercicioRealizado.ejercicios.addAll(detalleRutinaService.findBydiaAndCliente_dni(DIA[LocalDate.now().getDayOfWeek().getValue()],abmEjercicioRealizado.TFDniCliente.getText()));
         abmEjercicioRealizado.CBEjerAsociados.setItems(abmEjercicioRealizado.ejercicios);
@@ -96,7 +92,6 @@ public class ABMEjercicioRealizadoManager {
             abmEjercicioRealizado.ejerciciosRealizados.clear();
             abmEjercicioRealizado.TVEjerciciosRealizado.setItems(abmEjercicioRealizado.ejerciciosRealizados);
             abmEjercicioRealizado.LBVolumenTotal.setText("");
-
             abmEjercicioRealizado.TFDniCliente.setStyle("-fx-border-color: grey");
             abmEjercicioRealizado.CBEjerAsociados.setDisable(true);
             abmEjercicioRealizado.btCalificar.setDisable(true);
@@ -303,7 +298,9 @@ public class ABMEjercicioRealizadoManager {
 
         System.out.println();
 
-        for (EntrenamientoRealizado entrenamientoRealizado: entrenamientoRealizadoService.findByClienteDniAndEjercicios_grupoMusculares(abmEjercicioRealizado.TFDniCliente.getText().toString(), abmEjercicioRealizado.CBgrupoMusculares.getSelectionModel().getSelectedItem())){
+        for (EntrenamientoRealizado entrenamientoRealizado: entrenamientoRealizadoService.
+                findByClienteDniAndEjercicios_grupoMusculares(abmEjercicioRealizado.TFDniCliente.getText(),
+                        abmEjercicioRealizado.CBgrupoMusculares.getSelectionModel().getSelectedItem())){
             suma+= entrenamientoRealizado.getVolumenDiarioEntrenamientoRealizado();
         }
         abmEjercicioRealizado.LBVolumenGrupoMuscular.setText((suma.toString()));

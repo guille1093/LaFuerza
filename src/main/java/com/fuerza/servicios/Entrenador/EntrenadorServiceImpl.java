@@ -18,7 +18,7 @@ public class EntrenadorServiceImpl implements EntrenadorService, CrudService<Ent
 
 
     @Override
-    public Entrenador save(Entrenador entity) //ver si no es ncesario devolver void
+    public Entrenador save(Entrenador entity)
     {
         return EntrenadorRepository.save(entity);
     }
